@@ -18897,7 +18897,7 @@ input:focus {
 }
 
 .navbar.default-layout-navbar .navbar-brand-wrapper .navbar-brand {
-  color: #27367f;
+  color: #ffffff;
   font-size: 1.5rem;
   line-height: 48px;
   margin-right: 0;
@@ -18905,15 +18905,16 @@ input:focus {
 }
 
 .navbar.default-layout-navbar .navbar-brand-wrapper .navbar-brand:active, .navbar.default-layout-navbar .navbar-brand-wrapper .navbar-brand:focus, .navbar.default-layout-navbar .navbar-brand-wrapper .navbar-brand:hover {
-  color: #1b2658;
+  color: #ffffff;
 }
 
 .navbar.default-layout-navbar .navbar-brand-wrapper .navbar-brand img {
-  width: calc(255px - 100px);
+  /* width: calc(255px - 100px); */
   max-width: 100%;
   height: 38px;
   margin: auto;
   vertical-align: middle;
+  border-radius: 100%;
 }
 
 .navbar.default-layout-navbar .navbar-brand-wrapper .brand-logo-mini {
@@ -18925,6 +18926,7 @@ input:focus {
   width: calc(70px - 30px);
   max-width: 100%;
   margin: auto;
+  border-radius: 100%;
 }
 
 .navbar.default-layout-navbar .navbar-menu-wrapper {
@@ -19914,7 +19916,7 @@ code {
   -moz-transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
   -ms-transition: all 0.25s ease;
-  font-size: calc(0.8125rem - 0.05rem);
+  font-size: calc(0.92rem - 0.05rem);
   font-family: "PTSans", sans-serif;
   font-weight: 400;
   border-top: 1px solid #e0e0ef;

@@ -3,7 +3,7 @@
         <li class="nav-item nav-profile">
             <div class="nav-link">
                 <div class="profile-image">
-                    <img src="{{asset('melody/images/faces/face16.jpg')}}" alt="image" />
+                    <img src="{{asset('melody/images/faces/face24.jpeg')}}" alt="image" />
                 </div>
                 <div class="profile-name">
                     <p class="name">
@@ -235,7 +235,7 @@
             'business.index' ||
             'printers.index'
             )  --}}
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#page-layouts" aria-expanded="false"
                 aria-controls="page-layouts">
                 <i class="fas fa-cogs menu-icon"></i>
@@ -257,7 +257,7 @@
                 </ul>
             </div>
         </li> 
-        {{--  @endcan  --}}
+        {{--  @endcan  --}} -->
         <!-- <li class="nav-item">
             <a class="nav-link" href="https://www.youtube.com/channel/UCMWSlUcDJS00-5pmicciZ_w">
                 <i class="fab fa-youtube menu-icon"></i>

@@ -18417,7 +18417,7 @@ input:focus {
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 70px);
-  background: #ffffff;
+  background: #212529;
   font-family: "PTSans", sans-serif;
   font-weight: 400;
   padding: 0;
@@ -18456,7 +18456,7 @@ input:focus {
   align-items: center;
   white-space: nowrap;
   padding: 0.75rem 1.875rem 0.75rem 1.875rem;
-  color: #686868;
+  color: #fff;
   -webkit-transition-duration: 0.45s;
   -moz-transition-duration: 0.45s;
   -o-transition-duration: 0.45s;
@@ -18877,7 +18877,7 @@ input:focus {
 }
 
 .navbar.default-layout-navbar .navbar-brand-wrapper {
-  background: #ffffff;
+  background: #212529;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;

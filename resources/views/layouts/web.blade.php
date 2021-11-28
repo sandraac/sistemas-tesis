@@ -18,7 +18,7 @@
     <title>
         @yield('title', config('app.name'))
     </title>
-    <link rel="shortcut icon" href="{!!asset('galio/assets/img/favicon.ico')!!}" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="{!!asset('galio/assets/img/favicon.ico')!!}" type="image/x-icon" /> -->
     {!! Html::style('galio/assets/css/bootstrap.min.css') !!}
     {!! Html::style('galio/assets/css/font-awesome.min.css') !!}
     {!! Html::style('galio/assets/css/helper.min.css') !!}

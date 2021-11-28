@@ -1,6 +1,6 @@
 @extends('layouts.web')
 @section('meta_description', 'Remitec SAC')
-@section('title', 'Remitec SAC')
+@section('title', 'REMITEC SAC')
 @section('styles')
     
 @endsection

@@ -19,14 +19,6 @@
                 </a>
             </li>
             
-            <li class="
-            {!! active_class(route('web.blog')) !!}
-            ">
-                <a href="{{route('web.blog')}}">
-                    {{--  <i class="fa fa-book"></i>  --}}
-                    Blog
-                </a>
-            </li>
             <li>
                 <a href="{{route('web.contact_us')}}">
                     Contáctanos

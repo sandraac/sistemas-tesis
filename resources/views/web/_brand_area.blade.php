@@ -7,7 +7,7 @@
                     <div class="title-icon">
                         <i class="fa fa-crop"></i>
                     </div>
-                    <h3>Popular Brand</h3>
+                    <h3>Marca Popular</h3>
                 </div> <!-- section title end -->
             </div>
         </div>

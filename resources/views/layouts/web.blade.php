@@ -67,142 +67,7 @@
 </head>
 <body>
     <div class="wrapper box-layout">
-        <!-- modal -->
-        <div class="modal fade" id="modalInicio" role="dialog">
-            <div class="modal-dialog modal-lg">
-              <!-- Modal content-->
-             <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Información sobre la demo</h4>
-               </div>
-               <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">  
-                            <h4>Videos del curso en <a href="https://youtube.com/playlist?list=PL33d8DmxxcSNNIA6DVZ5Xrx50IGsyGfUt" target="_black">TEXVN ONLINE</a></h4>
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PL33d8DmxxcSNNIA6DVZ5Xrx50IGsyGfUt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="col-md-12 mt-3">
-                            <h3>Restricciones</h3>
-                            <p>Para evitar la alteración de la información, la demo no guarda los cambios de edición, creación y eliminación de los siguientes módulos.</p>
-                        </div>
-                        <div class="col-md-4 mt-3">
-                            <ul class="list-group list-group-flush">
-                                <p><strong><i class="fa fa-check"></i> Productos</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Categorías</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Etiquetas</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Marcas</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Publicaciones</strong> </p>
-                               
-                            </ul>
-                        </div>
-                        <div class="col-md-4 mt-3">
-                            <ul class="list-group list-group-flush">
-                                <p><strong><i class="fa fa-check"></i> Productos</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Categorías</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Etiquetas</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Marcas</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Publicaciones</strong> </p>
-                               
-                            </ul>
-                        </div>
-                        <div class="col-md-4 mt-3">
-                            <ul class="list-group list-group-flush">
-                                <p><strong><i class="fa fa-check"></i> Redes sociales</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Sliders</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Redes sociales</strong> </p>
-                                <p><strong><i class="fa fa-check"></i> Sliders</strong> </p>
-                            </ul>
-                        </div>
-                        <div class="col-md-12 mt-3">
-                            <h3>Credenciales para realizar pruebas de pago</h3>
-                            <p>Para evitar errores se recomienda usar estas credenciales de prueba.</p>
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <p><strong>PayPal</strong><br>
-                            <strong>Correo electrónico: </strong> sb-hqdis5181449@personal.example.com<br>
-                            <strong>Contraseña: </strong> pf>e0Q=V<br>
-                        </p>
-                        </div>
-                        <div class="col-md-6 mt-3">
-                            <p><strong>Stripe</strong><br>
-                            <strong>Número de tarjeta: </strong> 4242 4242 4242 4242 <br>
-                            <strong>MM/YY CVC: </strong> 04/24 242 42424 <br>
-                        </p>
-                        </div>
-
-                        <div class="col-md-6 mt-3">
-                            <p><strong>Mercado pago</strong><br>
-                            <strong>Número: </strong> 5031 7557 3453 0604 <br>
-                            <strong>Código de seguridad: </strong> 123 <br>
-                            <strong>Fecha de vencimiento: </strong> 11/25 <br>
-                        </p>
-                        </div>
-
-                        <div class="col-md-6 mt-3">
-                            <p><strong>PayU</strong><br>
-                            <strong>Numero de tarjeta: </strong>4111111111111111<br>
-                            <strong>CVC: </strong>123<br>
-                            <strong>MM: </strong>08<br>
-                            <strong>YY: </strong>2020<br>
-                            <strong>Tarjeta: </strong>VISA<br>
-                            <strong>Nombre: </strong>APPROVED<br>
-                            <strong>Correo: </strong>test@payulatam.com<br>
-                            </p>
-                        </div>
-
-                        <div class="col-md-12 mt-3">
-                            <h4>Credenciales de usuario</h4>
-                        </div>
-                        <div class="col-md-4">
-                            <p><strong>Administrador</strong></p>
-                            <p><strong>Correo: Admin@gmail.com</strong> </p>
-                            <p><strong>Contraseña: 123456789</strong> </p>
-                        </div>
-                        <div class="col-md-4">
-                            <p><strong>Cajero</strong></p>
-                            <p><strong>Correo: Cashier@gmail.com</strong> </p>
-                            <p><strong>Contraseña: 123456789</strong> </p>
-                        </div>
-                        <div class="col-md-4">
-                            <p><strong>Cliente</strong></p>
-                            <p><strong>Correo: Client@gmail.com</strong> </p>
-                            <p><strong>Contraseña: 123456789</strong> </p>
-                        </div>
-
-
-
-                        <div class="col-md-12 mt-3">
-                            <h4>Panel administrador</h4>
-                            <p>Recuerda que para acceder al panel administrador debes usar las credenciales de administrador y cerrar sesión como cliente, de lo contrario no tendrás permisos para ver ni realizar ninguna acción en el panel administrador.
-                            </p>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="{{route('login')}}" class="sqr-btn">Ir al panel administrador </a>
-                        </div>
-                        <div class="col-md-6">
-                            <p><strong>Correo: Admin@gmail.com</strong> </p>
-                            <p><strong>Contraseña: 123456789</strong> </p>
-                        </div>
-
-                        <div class="col-md-12 mt-3">
-                            <h4>Videos del curso </h4>
-
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PL33d8DmxxcSNNIA6DVZ5Xrx50IGsyGfUt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-              </div>
-            </div>
-        </div>
-        <!-- fin modal -->
+       
         <!-- header area start -->
         <header>
 
@@ -226,11 +91,11 @@
                             <div class="header-top-right float-md-right float-none">
                                 <nav>
                                     <ul>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#" data-toggle="modal" data-target="#modalInicio">
                                             Demo
                                         </a>
-                                    </li>
+                                    </li> -->
                                     @guest
                                     <li>
                                         <a href="{{ route('web.login_register') }}">Iniciar sesión</a>
@@ -283,7 +148,7 @@
                         <div class="col-lg-3">
                             <div class="brand-logo">
                                 <a href="{{route('web.welcome')}}">
-                                    <img src="{!!asset('galio/assets/img/logo/logo3.png')!!}" alt="{{$web_company->name}}">
+                                    <img src="{!!asset('galio/assets/img/logo/LogoRemitec.png')!!}" alt="{{$web_company->name}}">
                                 </a>
                             </div>
                         </div> <!-- end logo area -->
@@ -360,7 +225,7 @@
         <footer>
             <!-- footer top start -->
             
-            <div class="footer-top bg-black pt-14 pb-14">
+            <!-- <div class="footer-top bg-black pt-14 pb-14">
                 <div class="container">
                    @if (session('mensaje'))
                     <div class="alert alert-success rounded-0" role="alert">
@@ -401,95 +266,61 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- footer top end -->
 
             <!-- footer main start -->
             <div class="footer-widget-area pt-40 pb-38 pb-sm-4 pt-sm-30">
                 <div class="container">
+                    <div class="widget-title mb-10 mb-sm-6">
+                        <h4>CONTACTO</h4>
+                    </div>
                     <div class="row">
+
                         <div class="col-md-3 col-sm-6">
                             <div class="footer-widget mb-sm-26">
-                                <div class="widget-title mb-10 mb-sm-6">
-                                    <h4>CONTACTO</h4>
-                                </div>
+                                
                                 <div class="widget-body">
                                     <ul class="location">
                                         <li>
                                             <i class="fa fa-envelope"></i>
                                             {{$web_company->email}}
                                         </li>
+                                    </ul>
+
+                                </div>
+                            </div> <!-- single widget end -->
+                        </div> <!-- single widget column end -->
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footer-widget mb-sm-26">
+                                
+                                <div class="widget-body">
+                                    <ul class="location">
+
                                         <li>
                                             <i class="fa fa-phone"></i>
                                             {{$web_company->phone}}
                                         </li>
+
+                                    </ul>
+
+                                </div>
+                            </div> <!-- single widget end -->
+                        </div> <!-- single widget column end -->
+                        
+                        <div class="col-md-3 col-sm-6">
+                            <div class="footer-widget mb-sm-26">
+                            
+                                <div class="widget-body">
+                                    <ul class="location">
+
                                         <li>
                                             <i class="fa fa-map-marker"></i>
                                             Dirección:  {{$web_company->address}}
                                         </li>
                                     </ul>
-                                    <a class="map-btn" href="{{url($web_company->google_maps_link)}}" target="_blank">Abrir en Google Map</a>
-                                </div>
-                            </div> <!-- single widget end -->
-                        </div> <!-- single widget column end -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="footer-widget mb-sm-26">
-                                <div class="widget-title mb-10 mb-sm-6">
-                                    <h4>Mi cuenta</h4>
-                                </div>
-                                <div class="widget-body">
-                                    <ul>
-                                        @guest
-                                        <li><a href="{{route('web.login_register')}}">Iniciar sesión</a></li>
-                                        <li><a href="{{route('web.login_register')}}">Registro</a></li>
-                                        @else
-                                        <li><a href="{{route('web.my_account')}}">Mi cuenta</a></li>
-                                        {{--  @if ($shopping_cart->has_products())
-                                        <li><a href="{{route('web.checkout')}}">Pagar</a></li>
-                                        @endif  --}}
-                                       
-                                        <li><a href="{{route('web.orders')}}">Mis ordenes</a></li>
-                                        @endguest
-                                        <li><a href="{{route('web.cart')}}">mi carrito</a></li>
 
-                                    </ul>
-                                </div>
-                            </div> <!-- single widget end -->
-                        </div> <!-- single widget column end -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="footer-widget mb-sm-26">
-                                <div class="widget-title mb-10 mb-sm-6">
-                                    <h4>Categorías populares</h4>
-                                </div>
-                                <div class="widget-body">
-                                    <ul>
-                                        {{-- TRAER 5 CATEGORIAS --}}
-                                        {{-- @foreach ($web_categories->take(5) as $web_category)
-                                            <li>
-                                                <a href="{{route('web.get_products_category', $web_category)}}">
-                                                    {{$web_category->name}}
-                                                </a>
-                                            </li>
-                                        @endforeach --}}
-                                    </ul>
-                                </div>
-                            </div> <!-- single widget end -->
-                        </div> <!-- single widget column end -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="footer-widget mb-sm-26">
-                                <div class="widget-title mb-10 mb-sm-6">
-                                    <h4>Etiquetas populares</h4>
-                                </div>
-                                <div class="widget-body">
-                                    <ul>
-                                        {{-- @foreach ($web_tags_products->take(5) as $web_tag_product)
-                                        <li>
-                                            <a href="{{route('web.get_products_tag', $web_tag_product)}}">
-                                                {{$web_tag_product->name}}
-                                            </a>
-                                        </li>
-                                        @endforeach --}}
-                                    </ul>
                                 </div>
                             </div> <!-- single widget end -->
                         </div> <!-- single widget column end -->
@@ -499,19 +330,8 @@
             <!-- footer main end -->
 
             <!-- footer bootom start -->
-            <div class="footer-bottom-area bg-gray pt-20 pb-20">
-                <div class="container">
-                    <div class="footer-bottom-wrap">
-                        <div class="copyright-text">
-                            <p><a target="_blank" href="https://www.youtube.com/channel/UCMWSlUcDJS00-5pmicciZ_w">Texvn Online</a></p>
-                        </div>
-                        <div class="payment-method-img">
-                            @foreach ($web_payment_methods as $web_payment_method)
-                            <img src="/{{$web_payment_method->image}}" alt="{{$web_payment_method->name}}">
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
+            <div class="footer-bottom-area  pt-20 pb-20">
+
             </div>
             <!-- footer bootom end -->
 

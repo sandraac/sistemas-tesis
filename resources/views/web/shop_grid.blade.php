@@ -27,21 +27,17 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-lg-3 order-2">
+            <div class="col-lg-3 order-1">
                 <div class="shop-sidebar-wrap mt-md-28 mt-sm-28">
                    
                     @include('web._sidebar_categorie')
-                    <div class="sidebar-widget mb-22">
-                        @include('web._featured_category')
-                    </div>
-                    @include('web._product_tag')
 
                 </div>
             </div>
             <!-- sidebar end -->
 
             <!-- product main wrap start -->
-            <div class="col-lg-9 order-1">
+            <div class="col-lg-9 order-2">
                 {{--  <div class="shop-banner img-full">
                     <img src="galio/assets/img/banner/banner_static1.jpg" alt="">
                 </div>  --}}
@@ -105,9 +101,7 @@
 </div>
 <!-- page wrapper end -->
 
-<!-- brand area start -->
-@include('web._brand_area')
-<!-- brand area end -->
+
 @endsection
 @section('scripts')
 

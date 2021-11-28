@@ -23,7 +23,7 @@
             </a>
         </li>
         @endcan
-        {{--  @can('reports.day' || 'reports.date' || 'report.results')  --}}
+        <!-- {{--  @can('reports.day' || 'reports.date' || 'report.results')  --}}
         <li class="nav-item">
            
             <a class="nav-link" data-toggle="collapse" href="#page-layouts1" aria-expanded="false"
@@ -47,7 +47,7 @@
                 </ul>
             </div>
         </li>
-        {{--  @endcan  --}}
+        {{--  @endcan  --}} -->
         @can('purchases.index')
         <li class="nav-item">
             <a class="nav-link" href="{{route('purchases.index')}}">
@@ -113,7 +113,7 @@
         </li>
         {{--  @endcan  --}}
        
-        @can('posts.index')
+        <!-- @can('posts.index')
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#blog" aria-expanded="false"
                 aria-controls="blog">
@@ -133,7 +133,7 @@
             </div>
         </li> 
         @endcan
-       
+        -->
         {{--  @can(
             'social_medias.index' ||
             'sliders.index' ||
@@ -206,6 +206,31 @@
             </a>
         </li>
         @endcan
+        {{--  @can('reports.day' || 'reports.date' || 'report.results')  --}}
+        <li class="nav-item">
+           
+            <a class="nav-link" data-toggle="collapse" href="#page-layouts1" aria-expanded="false"
+                aria-controls="page-layouts">
+                <i class="fas fa-chart-line menu-icon"></i>
+                <span class="menu-title">Reportes</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="page-layouts1">
+                <ul class="nav flex-column sub-menu">
+                    @can('reports.day')
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link" href="{{route('reports.day')}}">Reportes por día</a>
+                    </li>
+                    @endcan
+                    @can('reports.date')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('reports.date')}}">Reportes por fecha</a>
+                    </li>
+                    @endcan
+                </ul>
+            </div>
+        </li>
+        {{--  @endcan  --}}
         {{--  @can(
             'business.index' ||
             'printers.index'
@@ -233,11 +258,11 @@
             </div>
         </li> 
         {{--  @endcan  --}}
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="https://www.youtube.com/channel/UCMWSlUcDJS00-5pmicciZ_w">
                 <i class="fab fa-youtube menu-icon"></i>
                 <span class="menu-title">YouTube</span>
             </a>
-        </li>
+        </li> -->
     </ul>
 </nav>

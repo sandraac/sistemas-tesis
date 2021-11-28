@@ -207,15 +207,15 @@
 
                 <ul class="navbar-nav navbar-nav-right">
 
-                    <li class="nav-item d-none d-lg-flex">
+                    <!-- <li class="nav-item d-none d-lg-flex">
                         <a class="nav-link" href="#"  data-toggle="modal" data-target="#modalInicio">
                           <span class="btn btn-primary">Demo</span>
                         </a>
-                    </li>
+                    </li> -->
 
                     @yield('create')
 
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
                           <i class="fas fa-bell mx-0"></i>
                             @if (auth()->user()->unreadNotifications->count() > 0)
@@ -251,7 +251,7 @@
                           </a> 
                           @endforeach
                         </div>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
@@ -268,7 +268,7 @@
                             onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                                 <i class="fas fa-power-off text-primary"></i>
-                                Logout
+                                Cerrar sesión
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
@@ -287,7 +287,7 @@
         <div class="container-fluid page-body-wrapper">
             <!-- partial:partials/_settings-panel.html -->
             <div class="theme-setting-wrapper">
-                <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
+                <!-- <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div> -->
                 <div id="theme-settings" class="settings-panel">
                     <i class="settings-close fa fa-times"></i>
                     <p class="settings-heading">SIDEBAR SKINS</p>
@@ -322,7 +322,7 @@
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.
                             Todos los derechos reservados.</span>
-                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="https://www.youtube.com/channel/UCMWSlUcDJS00-5pmicciZ_w">Texvn Online</a> </> <i class="far fa-heart text-danger"></i></span>
+                        <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="https://www.youtube.com/channel/UCMWSlUcDJS00-5pmicciZ_w">Texvn Online</a> </> <i class="far fa-heart text-danger"></i></span> -->
                     </div>
                 </footer>
                 <!-- partial -->

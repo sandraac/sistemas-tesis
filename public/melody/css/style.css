@@ -18417,7 +18417,7 @@ input:focus {
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 70px);
-  background: #212529;
+  background: #343a40;
   font-family: "PTSans", sans-serif;
   font-weight: 400;
   padding: 0;
@@ -18457,12 +18457,12 @@ input:focus {
   white-space: nowrap;
   padding: 0.75rem 1.875rem 0.75rem 1.875rem;
   color: #fff;
-  -webkit-transition-duration: 0.45s;
+  /* -webkit-transition-duration: 0.45s;
   -moz-transition-duration: 0.45s;
   -o-transition-duration: 0.45s;
   transition-duration: 0.45s;
   transition-property: color;
-  -webkit-transition-property: color;
+  -webkit-transition-property: color; */
 }
 
 .sidebar .nav .nav-item .nav-link i {
@@ -18497,7 +18497,7 @@ input:focus {
   display: inline-block;
   font-style: normal;
   font-size: .75rem;
-  color: #392C70;
+  color: #ffffff;
 }
 
 .rtl .sidebar .nav .nav-item .nav-link i.menu-arrow {
@@ -18508,7 +18508,7 @@ input:focus {
 .sidebar .nav .nav-item .nav-link .menu-title {
   color: inherit;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1;
   vertical-align: middle;
   font-weight: 400;
@@ -18534,7 +18534,7 @@ input:focus {
 .sidebar .nav .nav-item.active > .nav-link i,
 .sidebar .nav .nav-item.active > .nav-link .menu-title,
 .sidebar .nav .nav-item.active > .nav-link .menu-arrow {
-  color: #392C70;
+  color: #fff;
 }
 
 .sidebar .nav .nav-item.active > .nav-link:before {
@@ -18544,7 +18544,7 @@ input:focus {
   top: 0;
   height: 100%;
   width: 3px;
-  background: #392C70;
+  /* background: #392C70; */
 }
 
 .sidebar .nav .nav-item.nav-profile .nav-link {
@@ -18582,7 +18582,7 @@ input:focus {
 }
 
 .sidebar .nav .nav-item.nav-profile .profile-name .name {
-  color: #000000;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -18592,7 +18592,7 @@ input:focus {
 }
 
 .sidebar .nav .nav-item.nav-profile .profile-name .designation {
-  color: #686868;
+  color: #ffffff;
   font-size: .75rem;
 }
 
@@ -18609,8 +18609,8 @@ input:focus {
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile) > .nav-link {
-  background: #f6f6f6;
-  color: #8d9498;
+  background: #494e53;
+  color: #ffffff;
 }
 
 .sidebar .nav.sub-menu {
@@ -18624,10 +18624,10 @@ input:focus {
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link {
-  color: #999999;
+  color: #ffffff;
   padding: 0.75rem 1rem;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   line-height: 1;
   height: auto;
   border-top: 0;
@@ -18650,7 +18650,7 @@ input:focus {
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link:hover {
-  color: #000;
+  color: #fff;
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link:hover:before {
@@ -18658,7 +18658,7 @@ input:focus {
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link.active {
-  color: #392C70;
+  color: #000;
   background: transparent;
 }
 
@@ -18877,7 +18877,7 @@ input:focus {
 }
 
 .navbar.default-layout-navbar .navbar-brand-wrapper {
-  background: #212529;
+  background: #343a40;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
@@ -24094,8 +24094,8 @@ dl li {
 .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .page-item:hover .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:hover a, .jsgrid .jsgrid-pager .jsgrid-pager-page:hover a, .pagination .page-item:focus .page-link, .jsgrid .jsgrid-pager .page-item:focus .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:focus .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-page:focus .page-link, .pagination .page-item:focus .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .page-item:focus .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:focus a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:focus a, .pagination .page-item:focus
 .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .page-item:focus .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:focus a, .jsgrid .jsgrid-pager .jsgrid-pager-page:focus a, .pagination .page-item:active .page-link, .jsgrid .jsgrid-pager .page-item:active .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:active .page-link, .jsgrid .jsgrid-pager .jsgrid-pager-page:active .page-link, .pagination .page-item:active .jsgrid .jsgrid-pager .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .page-item:active .jsgrid-pager-nav-button a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button .page-item:active a, .jsgrid .jsgrid-pager .jsgrid-pager-nav-button:active a, .pagination .page-item:active
 .jsgrid .jsgrid-pager .jsgrid-pager-page a, .jsgrid .jsgrid-pager .page-item:active .jsgrid-pager-page a, .jsgrid .jsgrid-pager .jsgrid-pager-page .page-item:active a, .jsgrid .jsgrid-pager .jsgrid-pager-page:active a {
-  background: #392C70;
-  border-color: #392C70;
+  /* background: #392C70;
+  border-color: #392C70; */
   color: #ffffff;
 }
 

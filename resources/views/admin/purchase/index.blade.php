@@ -68,12 +68,6 @@
                                         <a href="{{route('purchases.show', $purchase)}}" class="btn btn-outline-info"
                                         title="Ver detalles"
                                         ><i class="far fa-eye"></i></a>
-                                        <a class="btn btn-outline-info" href="" title="Editar">
-                                            <i class="far fa-edit"></i>
-                                        </a>
-                                        <button class="btn btn-outline-danger delete-confirm" type="button" onclick="" title="Eliminar">
-                                            <i class="far fa-trash-alt"></i>
-                                        </button>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -17,13 +17,13 @@
         <h3 class="page-title">
             {{$role->name}}
         </h3>
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
                 <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
                 <li class="breadcrumb-item"><a href="{{route('roles.index')}}">Roles</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{{$role->name}}</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     <div class="row">
         <div class="col-12">

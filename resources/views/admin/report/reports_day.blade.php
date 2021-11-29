@@ -12,12 +12,12 @@
         <h3 class="page-title">
             Reporte de ventas
         </h3>
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
                 <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Reporte de ventas</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">

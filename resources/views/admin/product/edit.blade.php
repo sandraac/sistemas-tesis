@@ -14,13 +14,13 @@
         <h3 class="page-title">
             Edición de productos
         </h3>
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
                 <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
                 <li class="breadcrumb-item"><a href="{{route('products.index')}}">Productos</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Edición de producto</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     {!! Form::model($product,['route'=>['products.update',$product], 'method'=>'PUT','files' => true]) !!}
     <div class="row">

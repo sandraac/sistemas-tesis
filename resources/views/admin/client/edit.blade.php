@@ -12,13 +12,13 @@
         <h3 class="page-title">
             Edición de cliente
         </h3>
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
                 <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
                 <li class="breadcrumb-item"><a href="{{route('clients.index')}}">Clientes</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Edición de cliente</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">

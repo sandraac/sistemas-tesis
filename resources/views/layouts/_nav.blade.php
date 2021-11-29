@@ -59,7 +59,7 @@
         @can('sales.index')
         <li class="nav-item">
             <a class="nav-link" href="{{route('sales.index')}}">
-                <i class="fas fa-shopping-cart menu-icon"></i>
+                <i class="fas fa-hand-holding-usd menu-icon"></i>
                 <span class="menu-title">Ventas</span>
             </a>
         </li>
@@ -190,7 +190,7 @@
             </a>
         </li>  
         @endcan
-        @can('users.index')
+        <!-- @can('users.index')
         <li class="nav-item">
             <a class="nav-link" href="{{route('users.index')}}">
                 <i class="fas fa-user-tag menu-icon"></i>
@@ -205,13 +205,13 @@
                 <span class="menu-title">Roles</span>
             </a>
         </li>
-        @endcan
+        @endcan -->
         {{--  @can('reports.day' || 'reports.date' || 'report.results')  --}}
         <li class="nav-item">
            
             <a class="nav-link" data-toggle="collapse" href="#page-layouts1" aria-expanded="false"
                 aria-controls="page-layouts">
-                <i class="fas fa-chart-line menu-icon"></i>
+                <i class="far fa-file-pdf menu-icon"></i>
                 <span class="menu-title">Reportes</span>
                 <i class="menu-arrow"></i>
             </a>

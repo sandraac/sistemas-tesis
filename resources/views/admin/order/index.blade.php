@@ -21,12 +21,12 @@
         <h3 class="page-title">
             Pedidos 
         </h3>
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Panel administrador</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Pedidos</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">

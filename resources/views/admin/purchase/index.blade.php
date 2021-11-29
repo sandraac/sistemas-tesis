@@ -15,12 +15,12 @@
         <h3 class="page-title">
             Compras
         </h3>
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
                 <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Compras</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
@@ -33,7 +33,7 @@
                                     <th>Id</th>
                                     <th>Fecha</th>
                                     <th>Total</th>
-                                    <th>Estado</th>
+                                    <!-- <th>Estado</th> -->
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -48,7 +48,7 @@
                                     </td>
                                     <td>{{$purchase->total}}</td>
 
-                                    @if ($purchase->status == 'VALID')
+                                    <!-- @if ($purchase->status == 'VALID')
                                     <td>
                                         <a class="jsgrid-button btn btn-success" href="{{route('change.status.purchases', $purchase)}}" title="Editar">
                                             Activo <i class="fas fa-check"></i>
@@ -60,7 +60,7 @@
                                             Cancelado <i class="fas fa-times"></i>
                                         </a>
                                     </td>
-                                    @endif
+                                    @endif -->
                                     <td style="width: 20%;">
                                         <a href="{{route('purchases.pdf', $purchase)}}" class="btn btn-outline-danger"
                                         title="Generar PDF"
@@ -68,6 +68,12 @@
                                         <a href="{{route('purchases.show', $purchase)}}" class="btn btn-outline-info"
                                         title="Ver detalles"
                                         ><i class="far fa-eye"></i></a>
+                                        <a class="btn btn-outline-info" href="" title="Editar">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                        <button class="btn btn-outline-danger delete-confirm" type="button" onclick="" title="Eliminar">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
                                     </td>
                                 </tr>
                                 @endforeach

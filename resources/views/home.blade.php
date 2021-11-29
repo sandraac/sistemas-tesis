@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Panel administrador')
+@section('title','REMITEC | Administrador')
 @section('styles')
 <style type="text/css">
     .unstyled-button {

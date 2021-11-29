@@ -12,7 +12,7 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-            Ventas
+        <i class="fas fa-coins fa-fw"></i> VENTAS
         </h3>
         <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">

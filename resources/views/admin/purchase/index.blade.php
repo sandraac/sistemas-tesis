@@ -13,7 +13,7 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-            Compras
+        <i class="fas fa-file-invoice-dollar fa-fw"></i> COMPRAS
         </h3>
         <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">

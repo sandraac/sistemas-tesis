@@ -11,16 +11,11 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-            Registro de compra
-        </h3>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('purchases.index')}}">Compras</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Registro de compra</li>
-            </ol>
-        </nav>
+        <i class="fas fa-shopping-bag fa-fw"></i> Nueva Compra
     </div>
+    <p class="text-justify">
+        En el módulo COMPRAS usted podrá registrar compras de productos ya sea nuevos o ya registrados en sistema. También puede ver la lista de todas las compras realizadas, buscar compras y ver información más detallada de cada compra. 
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -29,8 +24,8 @@
                     @include('admin.purchase._form')
                 </div>
                 <div class="card-footer text-muted">
-                    <button type="submit" id="guardar" class="btn btn-primary float-right">Registrar</button>
-                    <a href="{{ URL::previous() }}" class="btn btn-light">
+                    <button type="submit" id="guardar" class="btn btn-info float-right">Registrar</button>
+                    <a href="{{ URL::previous() }}" class="btn btn-danger">
                         Cancelar
                     </a>
                 </div>

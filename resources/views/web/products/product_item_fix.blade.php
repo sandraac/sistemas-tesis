@@ -1,8 +1,7 @@
 <div class="product-item fix {{$mb}}">
     <div class="product-thumb">
         <a href="{{route('web.product_details', $product)}}">
-            <img src="{{$product->images->pluck('url')[0]}}" class="img-pri" alt="{{$product->name}}">
-            <img src="{{$product->images->pluck('url')[1]}}" class="img-sec" alt="{{$product->name}}">
+            
         </a>
         <div class="product-label">
             @if ($product->has_promotions())

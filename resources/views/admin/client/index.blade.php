@@ -10,16 +10,13 @@
 @section('content')
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title">
-            Clientes
+        <h3 class="text-left text-uppercase">
+            <i class="fas fa-child fa-fw"></i> &nbsp; Clientes
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Clientes</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo CLIENTE podrá registrar en el sistema los datos de sus clientes más frecuentes para realizar ventas, además podrá realizar búsquedas de clientes, actualizar datos de sus clientes o eliminarlos si así lo desea.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -30,8 +27,8 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Nombre</th>
-                                    <th>DNI</th>
-                                    <th>Teléfono / Celular</th>
+                                    <!-- <th>DNI</th>
+                                    <th>Teléfono / Celular</th> -->
                                     <th>Correo electrónico</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -43,8 +40,8 @@
                                     <td>
                                         <a href="{{route('clients.show',$client)}}">{{$client->name}}</a>
                                     </td>
-                                    <td>{{$client->dni}}</td>
-                                    <td>{{$client->phone}}</td>
+                                    <!-- <td>{{$client->dni}}</td>
+                                    <td>{{$client->phone}}</td> -->
                                     <td>{{$client->email}}</td>
                                     <td>
                                         <form method="POST" action="{{route('clients.destroy',$client)}}" id="delete-item_{{$client->id}}">
@@ -89,7 +86,7 @@
 			"<'row'<'col-sm-5'i><'col-sm-7'p>>", 
             buttons: [
                 {
-                    text: '<i class="fas fa-plus"></i> Nuevo',
+                    text: '<i class="fas fa-plus"></i> Nuevo Cliente',
                     className: 'btn btn-info',
                     action: function ( e, dt, node, conf ) {
                         window.location.href = "{{route('clients.create')}}"

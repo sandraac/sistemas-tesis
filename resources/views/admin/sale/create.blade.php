@@ -15,19 +15,21 @@
 @section('preference')
 @endsection
 @section('content')
+
+
+
+
+
+
+
 <div class="content-wrapper">
-    <div class="page-header">
+<div class="page-header">
         <h3 class="page-title">
-            Registro de venta
-        </h3>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('sales.index')}}">Ventas</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Registro de venta</li>
-            </ol>
-        </nav>
+        <i class="fas fa-cart-plus fa-fw"></i> Nueva Venta
     </div>
+    <p class="text-justify">
+    En el módulo VENTAS podrá realizar ventas de productos. También puede ver las ventas realizadas y buscar ventas en el sistema.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -40,8 +42,8 @@
                     @include('admin.sale._form')
                 </div>
                 <div class="card-footer text-muted">
-                    <button type="submit" id="guardar" class="btn btn-primary float-right">Registrar</button>
-                     <a href="{{ URL::previous() }}" class="btn btn-light">
+                    <button type="submit" id="guardar" class="btn btn-info float-right">Registrar</button>
+                     <a href="{{ URL::previous() }}" class="btn btn-danger">
                         Cancelar
                      </a>
                 </div>
@@ -73,8 +75,8 @@
                 <input type="hidden" name="sale" value="1">
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-success">Registrar</button>
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-info">Registrar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
             </div>
         {!! Form::close() !!}
         </div>

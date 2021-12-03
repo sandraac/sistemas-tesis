@@ -34,7 +34,7 @@ class ProviderController extends Controller
     }
     public function store(StoreRequest $request)
     {
-        // Provider::create($request->all());
+        Provider::create($request->all());
         return redirect()->route('providers.index')->with('toast_success', '¡Proveedor registrado con éxito!');
     }
     public function show(Provider $provider)
@@ -47,13 +47,13 @@ class ProviderController extends Controller
     }
     public function update(UpdateRequest $request, Provider $provider)
     {
-        // $provider->update($request->all());
+        $provider->update($request->all());
         return redirect()->route('providers.index')->with('toast_success', '¡Proveedor actualizado con éxito!');
     }
     public function destroy(Provider $provider)
     {
         try {
-            // $provider->delete();
+            $provider->delete();
     
         } catch (Throwable $e) {
             return redirect()->back()->with('toast_error ', '¡El proveedor tiene productos relacionados!');

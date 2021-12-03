@@ -12,15 +12,14 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
+            <i class="fas fa-boxes fa-fw"></i>
             Productos
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Productos</li>
-            </ol>
-        </nav> -->
+
     </div>
+    <p class="text-justify">
+        En el módulo PRODUCTOS podrá agregar nuevos productos al sistema, actualizar datos de los productos, eliminar o actualizar la imagen de los productos y buscar productos en el sistema.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -33,7 +32,7 @@
                                     <th>Nombre</th>
                                     <th>Stock</th>
                                     <th>Precio de venta</th>
-                                    <th>Estado</th>
+                                    
                                     <th>Categoría</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -47,21 +46,7 @@
                                     </td>
                                     <td>{{$product->stock}}</td>
                                     <td>{{$product->sell_price}}</td>
-                                    <td class="second_td">
-                                        <a 
-                                        href="#"
-                                        id="username" 
-                                        class="editable"
-                                        data-type="select" 
-                                        data-pk="{{$product->id}}" 
-
-                                        data-url="{{route('update_product_status',$product->id)}}"
-
-                                        data-title="Estado"
-                                        data-value="{{ $product->status }}"
-                                        >{{$product->product_status()}}
-                                        </a>
-                                    </td>
+                                    
 
                                     <td>
                                         {{ (isset($product->category->name)) ? $product->category->name : '' }}
@@ -156,10 +141,11 @@
                     "<'row'<'col-sm-5'i><'col-sm-7'p>>", 
                     buttons: [
                         {
-                            text: '<i class="fas fa-plus"></i> Nuevo',
+                            text: '<i class="fas fa-plus"></i> Nuevo Producto',
                             className: 'btn btn-info',
                             action: function ( e, dt, node, conf ) {
-                                $('#exampleModal-2').modal('show');
+                                // $('#exampleModal-2').modal('show');
+                                window.location.href = "{{route('products.create')}}"
                             }
                         }
                     ],

@@ -13,15 +13,11 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-        <i class="fas fa-file-invoice-dollar fa-fw"></i> COMPRAS
-        </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Compras</li>
-            </ol>
-        </nav> -->
+        <i class="fas fa-file-invoice-dollar fa-fw"></i> COMPRAS REALIZADAS
     </div>
+    <p class="text-justify">
+        En el módulo COMPRAS usted podrá registrar compras de productos ya sea nuevos o ya registrados en sistema. También puede ver la lista de todas las compras realizadas, buscar compras y ver información más detallada de cada compra. 
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -96,7 +92,7 @@
 			"<'row'<'col-sm-5'i><'col-sm-7'p>>", 
             buttons: [
                 {
-                    text: '<i class="fas fa-plus"></i> Nuevo',
+                    text: '<i class="fas fa-plus"></i> Nueva Compra',
                     className: 'btn btn-info',
                     action: function ( e, dt, node, conf ) {
                         window.location.href = "{{route('purchases.create')}}"

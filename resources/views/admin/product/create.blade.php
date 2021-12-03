@@ -11,19 +11,16 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-            Registro de productos
+            <i class="fas fa-box fa-fw"></i>
+            NUEVO PRODUCTO
         </h3>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('products.index')}}">Productos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Registro de productos</li>
-            </ol>
-        </nav>
     </div>
+    <p class="text-justify">
+        En el módulo PRODUCTOS podrá agregar nuevos productos al sistema, actualizar datos de los productos, eliminar o actualizar la imagen de los productos y buscar productos en el sistema.
+    </p>
     {!! Form::open(['route'=>'products.store', 'method'=>'POST','files' => true]) !!}
     <div class="row">
-        <div class="col-md-8 grid-margin stretch-card">
+        <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
                     <div class="form-group">
@@ -34,9 +31,12 @@
                     <div class="form-row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="code">Código de barras</label>
-                                <input type="text" name="code" id="code" class="form-control">
-                                <small id="helpId" class="text-muted">Campo opcional</small>
+                                <label for="category">Categoría</label>
+                                <select class="select2" id="category" style="width: 100%">
+                                    @foreach ($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -48,11 +48,11 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="short_description">Extracto</label>
                         <textarea class="form-control" name="short_description" id="short_description"
                             rows="3"></textarea>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label for="long_description">Descripción</label>
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <!-- <div class="col-md-4 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
                     <div class="form-group">
@@ -104,7 +104,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="row">
         <div class="col-12 grid-margin">
@@ -116,8 +116,8 @@
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary float-right">Registrar</button>
-    <a href="{{ URL::previous() }}" class="btn btn-light">
+    <button type="submit" class="btn btn-info float-right">Registrar</button>
+    <a href="{{ URL::previous() }}" class="btn btn-danger">
         Cancelar
     </a>
     {!! Form::close() !!}

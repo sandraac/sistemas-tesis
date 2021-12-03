@@ -9,17 +9,14 @@
 @section('content')
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title">
-            Editar categoría
+    <h3 class="page-title">
+        <i class="fas fa-sync fa-fw"></i>
+            ACTUALIZAR CATEGORÍA
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('categories.index')}}">Categorías</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Editar categoría</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo CATEGORÍA usted podrá registrar las categorías que servirán para agregar productos y también podrá ver los productos que pertenecen a una categoría determinada. Además de lo antes mencionado, puede actualizar los datos de las categorías, realizar búsquedas de categorías o eliminarlas si así lo desea.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -34,9 +31,9 @@
                           <label for="description">Descripción</label>
                           <textarea class="form-control" name="description" id="description" rows="3" required>{{old('name',$category->description)}}</textarea>
                         </div>
-                            @if ($category->parent_id == null)
+                            <!-- @if ($category->parent_id == null)
                             @include('admin.category._form')
-                            @endif
+                            @endif -->
                         @else
                         <div class="form-group">
                             <label for="name">Nombre</label>
@@ -47,8 +44,8 @@
                           <textarea class="form-control" name="description" id="description" rows="3" required>{{old('name',$category->description)}}</textarea>
                         </div>
                         @endif
-                     <button type="submit" class="btn btn-primary mr-2">Actualizar</button>
-                     <a href="{{ URL::previous() }}" class="btn btn-light">
+                     <button type="submit" class="btn btn-info mr-2">Actualizar</button>
+                     <a href="{{ URL::previous() }}" class="btn btn-danger">
                         Cancelar
                      </a>
                      {!! Form::close() !!}

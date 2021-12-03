@@ -44,9 +44,10 @@ Route::prefix('admin')->group(function () {
         'show'
     ])->names('tags');
     Route::resource('categories', CategoryController::class)->names('categories');
-    Route::resource('products', ProductController::class)->except([
-        'create'
-    ])->names('products');
+    // Route::resource('products', ProductController::class)->except([
+    //     'create'
+    // ])->names('products');
+    Route::resource('products', ProductController::class)->names('products');
     Route::resource('posts', PostController::class)->except([
         'create'
     ])->names('posts');

@@ -7,6 +7,8 @@ use App\Models\OrderDetail;
 use App\Models\Sale;
 use App\Models\Product;
 use App\Models\Purchase;
+use App\Models\Provider;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -63,6 +65,13 @@ class HomeController extends Controller
         inner join sales v on dv.sale_id=v.id where v.status="VALID" 
         and MONTH(v.sale_date)=MONTH(curdate()) 
         group by p.code ,p.name, p.id , p.stock order by sum(dv.quantity) desc limit 10');
-        return view('home', compact( 'comprasmes', 'ventasmes', 'ventasdia', 'totales', 'productosvendidos','order_mes','most_ordered_products','orders_of_the_day','orders_of_the_day_status'));
+
+
+        $providers = Provider::count();
+        $users = User::count();
+        $products = Product::count();
+
+        // dd($providers);
+        return view('home', compact( 'comprasmes', 'ventasmes', 'ventasdia', 'totales', 'productosvendidos','order_mes','most_ordered_products','orders_of_the_day','orders_of_the_day_status','providers','users','products'));
     }
 }

@@ -61,7 +61,7 @@ class ClientController extends Controller
     public function destroy(User $client)
     {
         try {
-            // $client->delete();
+            $client->delete();
         } catch (Throwable $e) {
             // report($e);
             return redirect()->back()->with('toast_error', '¡El cliente está asociado a otros registros!');

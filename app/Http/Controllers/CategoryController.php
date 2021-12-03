@@ -39,7 +39,7 @@ class CategoryController extends Controller
     }
     public function store(StoreRequest $request, Category $category)
     {
-        // $category->my_store($request);
+        $category->my_store($request);
         return redirect()->route('categories.index')->with('toast_success', '¡Categoría creada con éxito!');
     }
     public function show(Category $category)
@@ -56,13 +56,13 @@ class CategoryController extends Controller
     }
     public function update(UpdateRequest $request, Category $category)
     {
-        // $category->my_update($request);
+        $category->my_update($request);
         return redirect()->route('categories.index')->with('toast_success', '¡Categoría actualizada con éxito!');
     }
     public function destroy(Category $category)
     {
         try {
-            // $category->delete();
+            $category->delete();
         } catch (Throwable $e) {
             // report($e);
             return redirect()->back()->with('toast_error', '¡La categoría tiene productos asociados!');

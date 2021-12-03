@@ -8,18 +8,14 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-    <div class="page-header">
-        <h3 class="page-title">
-            Edición de cliente
+<div class="page-header">
+        <h3 class="text-left text-uppercase">
+            <i class="fas fa-sync fa-fw"></i> &nbsp; actualizar cliente
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('clients.index')}}">Clientes</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edición de cliente</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo CLIENTE podrá registrar en el sistema los datos de sus clientes más frecuentes para realizar ventas, además podrá realizar búsquedas de clientes, actualizar datos de sus clientes o eliminarlos si así lo desea.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">

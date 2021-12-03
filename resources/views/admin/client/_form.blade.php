@@ -206,7 +206,7 @@
     </span>
     @enderror
 </div>  --}}
-<button type="submit" class="btn btn-primary mr-2">{{ __($btnText) }}</button>
-<a href="{{ URL::previous() }}" class="btn btn-light">
+<button type="submit" class="btn btn-info mr-2">{{ __($btnText) }}</button>
+<a href="{{ URL::previous() }}" class="btn btn-danger">
     Cancelar
 </a>

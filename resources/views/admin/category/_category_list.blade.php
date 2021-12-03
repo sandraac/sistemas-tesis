@@ -13,18 +13,7 @@ class="treegrid-{{$subcategory_2->id}} treegrid-parent-{{$subcategory_1->id}}"
     <td>
         <a class="text-primary" href="{{route('categories.show',$item)}}">{{$item->name}}</a>
     </td>
-    <td>
-        @if ($form_number == '0')
-        <label class="badge badge-warning badge-pill">
-            {{$item->category_type()}}
-        </label>
-        @endif
-    </td>
-    <td>
-        <label class="badge badge-success badge-pill">
-            ({{$item->item_numbers()}}) {{$item->counter_text()}}
-        </label>
-    </td>
+
     <td>{{$item->description}}</td>
     <td style="width: 20%;">
     <form method="POST" action="{{route('categories.destroy', $item)}}" id="delete-item_{{$item->id}}">

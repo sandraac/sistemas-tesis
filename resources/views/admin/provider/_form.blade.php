@@ -103,7 +103,7 @@
         </div>
     </div>
 </div>
-<button type="submit" class="btn btn-primary mr-2">{{ __($btnText) }}</button>
-<a href="{{route('providers.index')}}" class="btn btn-light">
+<button type="submit" class="btn btn-info mr-2">{{ __($btnText) }}</button>
+<a href="{{route('providers.index')}}" class="btn btn-danger">
     Cancelar
 </a>

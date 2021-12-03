@@ -10,16 +10,13 @@
 @section('content')
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title">
-            Proveedores
+        <h3 class="text-left text-uppercase">
+            <i class="fas fa-shipping-fast fa-fw"></i> &nbsp; proveedores
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Proveedores</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo PROVEEDORES usted podrá registrar los proveedores de productos a los cuales usted les compra productos o mercancía. Además, podrá actualizar los datos de los proveedores, ver todos los proveedores registrados en el sistema, buscar proveedores en el sistema o eliminarlos si así lo desea. 
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -89,7 +86,7 @@
 			"<'row'<'col-sm-5'i><'col-sm-7'p>>", 
             buttons: [
                 {
-                    text: '<i class="fas fa-plus"></i> Nuevo',
+                    text: '<i class="fas fa-plus"></i> Nuevo Proveedor',
                     className: 'btn btn-info',
                     action: function ( e, dt, node, conf ) {
                         window.location.href = "{{route('providers.create')}}"

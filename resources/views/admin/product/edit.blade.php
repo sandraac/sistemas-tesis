@@ -12,19 +12,16 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-            Edición de productos
+        <i class="fas fa-sync fa-fw"></i>
+            ACTUALIZAR PRODUCTO
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('products.index')}}">Productos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edición de producto</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo PRODUCTOS podrá agregar nuevos productos al sistema, actualizar datos de los productos, eliminar o actualizar la imagen de los productos y buscar productos en el sistema.
+    </p>
     {!! Form::model($product,['route'=>['products.update',$product], 'method'=>'PUT','files' => true]) !!}
     <div class="row">
-        <div class="col-md-8 grid-margin stretch-card">
+        <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
                     <div class="form-group">
@@ -37,11 +34,48 @@
                         </span>
                         @enderror
                     </div>
-                    <div class="form-group">
+
+
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="category_id">Categoría</label>
+                                <select class="select2 @error('category_id') is-invalid @enderror" id="category_id"
+                                    name="category_id" style="width: 100%" required>
+                                    @foreach ($categories as $category)
+                                    <option value="{{$category->id}}" 
+                                        {{old('category_id', $product->category_id) == $category->id ? 'selected' : ''}}
+                                        >{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('category_id')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sell_price">Precio de venta</label>
+                                <input type="number" name="sell_price" value="{{  old('sell_price', $product->sell_price)}}"
+                                    id="sell_price" class="form-control @error('sell_price') is-invalid @enderror"
+                                    aria-describedby="helpId" required>
+                                @error('sell_price')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group" style="display: none">
                         <label for="short_description">Extracto</label>
                         <textarea class="form-control @error('short_description') is-invalid @enderror"
                             name="short_description" id="short_description" rows="5" required>
-                        {{old('short_description', $product->short_description)}}
+                        extracto
                         </textarea>
                         @error('short_description')
                         <span class="invalid-feedback" role="alert">
@@ -64,11 +98,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4 grid-margin stretch-card">
+        <div class="col-md-4 grid-margin stretch-card" style="display: none">
             <div class="card">
                 <div class="card-body">
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label for="status">Estado de publicación</label>
                       <select class="form-control" name="status" id="status">
                           @foreach (get_product_statuses() as $status)
@@ -79,9 +113,9 @@
                           >{{ $status['name']}} </option>
                           @endforeach
                       </select>
-                    </div>
+                    </div> -->
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="code">Código de barras</label>
                         <input type="text" name="code" value="{{  old('code', $product->code)}}" id="code"
                             class="form-control @error('code') is-invalid @enderror">
@@ -91,8 +125,8 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                    </div>
-                    <div class="form-group">
+                    </div> -->
+                    <!-- <div class="form-group">
                         <label for="sell_price">Precio de venta</label>
                         <input type="number" name="sell_price" value="{{  old('sell_price', $product->sell_price)}}"
                             id="sell_price" class="form-control @error('sell_price') is-invalid @enderror"
@@ -118,9 +152,9 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                    </div>
+                    </div> -->
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="brand_id">Marca</label>
                         <select class="select2 @error('brand_id') is-invalid @enderror" id="brand_id" name="brand_id"
                             style="width: 100%">
@@ -135,12 +169,12 @@
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror
-                    </div>
+                    </div> -->
 
-                    <div class="form-group">
+                    <div class="form-group" >
                         <label for="provider_id">Proveedor</label>
                         <select class="select2 @error('provider_id') is-invalid @enderror" name="provider_id"
-                            id="provider_id" style="width: 100%" required>
+                            id="provider_id" style="width: 100%">
                             @foreach ($providers as $provider)
                             <option value="{{$provider->id}}"
                                 {{ old('provider_id', $product->provider_id) == $provider->id ? 'selected' : ''}}>
@@ -154,7 +188,7 @@
                         @enderror
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="tags">Etiquetas</label>
                         <select class="select2" name="tags[]" id="tags" style="width: 100%" multiple required>
                             @foreach ($tags as $tag)
@@ -164,15 +198,15 @@
                             @endforeach
 
                         </select>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary float-right">Actualizar</button>
-        <a href="{{ URL::previous() }}" class="btn btn-light">
+        <button type="submit" class="btn btn-info float-right">Actualizar</button>
+        <a href="{{ URL::previous() }}" class="btn btn-danger">
             Cancelar
         </a>
     </div>

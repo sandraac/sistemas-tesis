@@ -47,8 +47,9 @@ class ProductController extends Controller
     }
     public function store(StoreRequest $request, Product $product)
     {
-        // $product = $product->my_store($request);
-        return redirect()->route('products.edit',  $product)->with('toast_warning', '¡Rellena el formulario para publicar el producto!');
+        $product = $product->my_store($request);
+        // dd($product);
+        return redirect()->route('products.index',  $product)->with('toast_success', '¡Producto registrado correctamente!');
     }
     public function show(Product $product)
     {
@@ -56,6 +57,7 @@ class ProductController extends Controller
     }
     public function edit(Product $product)
     {
+        
         $categories = Category::where('category_type', 'PRODUCT')->get();
         $providers = Provider::all();
         $tags = Tag::all();
@@ -64,13 +66,16 @@ class ProductController extends Controller
     }
     public function update(UpdateRequest $request, Product $product)
     {
-        // $product->my_update($request);
+        // dd($request);
+        $product->my_update($request);
         return redirect()->route('products.index')->with('toast_success', '¡Producto actualizado con éxito!');
     }
     public function destroy(Product $product)
     {
-        // $product->delete();
-        return redirect()->back()->with('toast_success', '¡Producto eliminado con éxito!');
+        $product->delete();
+        // return redirect()->back()->with('toast_success', '¡Producto eliminado con éxito!');
+        return redirect()->route('products.index')->with('toast_success', '¡Producto eliminado con éxito!');
+
     }
 
     public function change_status(Product $product)

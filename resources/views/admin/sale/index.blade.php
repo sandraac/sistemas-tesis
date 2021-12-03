@@ -12,15 +12,12 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-        <i class="fas fa-coins fa-fw"></i> VENTAS
+        <i class="fas fa-coins fa-fw"></i> VENTAS REALIZADAS
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Ventas</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo VENTAS podrá realizar ventas de productos. También puede ver las ventas realizadas y buscar ventas en el sistema.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -33,7 +30,6 @@
                                     <th>Id</th>
                                     <th>Fecha</th>
                                     <th>Total</th>
-                                    <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -48,26 +44,14 @@
                                     </td>
                                     <td>{{$sale->total}}</td>
 
-                                    @if ($sale->status == 'VALID')
-                                    <td>
-                                        <a class="jsgrid-button btn btn-success" href="{{route('change.status.sales', $sale)}}" title="Editar">
-                                            Activo <i class="fas fa-check"></i>
-                                        </a>
-                                    </td>
-                                    @else
-                                    <td>
-                                        <a class="jsgrid-button btn btn-danger" href="{{route('change.status.sales', $sale)}}" title="Editar">
-                                            Cancelado <i class="fas fa-times"></i>
-                                        </a>
-                                    </td>
-                                    @endif
+                                    
 
                                     <td style="width: 20%;">
 
                                         <a href="{{route('sales.pdf', $sale)}}" class="btn btn-outline-danger"
                                         title="Generar PDF"><i class="far fa-file-pdf"></i></a>
-                                        <a href="{{route('sales.print', $sale)}}" class="btn btn-outline-warning"
-                                        title="Imprimir boleta"><i class="fas fa-print"></i></a>
+                                        <!-- <a href="{{route('sales.print', $sale)}}" class="btn btn-outline-warning"
+                                        title="Imprimir boleta"><i class="fas fa-print"></i></a> -->
                                         <a href="{{route('sales.show', $sale)}}" class="btn btn-outline-info"
                                         title="Ver detalles"><i class="far fa-eye"></i></a>
                                    
@@ -99,7 +83,7 @@
 			"<'row'<'col-sm-5'i><'col-sm-7'p>>", 
             buttons: [
                 {
-                    text: '<i class="fas fa-plus"></i> Nuevo',
+                    text: '<i class="fas fa-plus"></i> Nueva venta',
                     className: 'btn btn-info',
                     action: function ( e, dt, node, conf ) {
                         window.location.href = "{{route('sales.create')}}"

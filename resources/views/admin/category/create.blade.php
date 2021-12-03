@@ -10,30 +10,26 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
-            Registro de categorías
+            <i class="fas fa-tags fa-fw"></i>
+            Nueva Categoría
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item"><a href="{{route('categories.index')}}">Categorías</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Registro de categorías</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo CATEGORÍA usted podrá registrar las categorías que servirán para agregar productos y también podrá ver los productos que pertenecen a una categoría determinada. Además de lo antes mencionado, puede actualizar los datos de las categorías, realizar búsquedas de categorías o eliminarlas si así lo desea.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
                     {!! Form::open(['route'=>'categories.store', 'method'=>'POST']) !!}
-                    <div class="form-group">
+                    <div class="form-group" style="display: none">
                       <label for="category_type">Modulo</label>
                       <select class="form-control
                         @error('category_type') 
                             is-invalid 
                         @enderror
-                        " name="category_type" id="category_type" onchange="showInp()" required>
-                        <option selected disabled>¿para qué modulo deseas crear la categoría?</option>
-                            <option value="PRODUCT">Productos</option>
+                        " name="category_type" id="category_type" onchange="showInp()" required >
+                            <option value="PRODUCT" selected>Productos</option>
                             <option value="POST">Publicaciones</option>
                         </select>
                         @error('category_type')
@@ -90,8 +86,8 @@
                     @include('admin.category._form',[
                         'category' => new \App\Models\Category()
                     ])
-                    <button type="submit" class="btn btn-primary mr-2">Registrar</button>
-                    <a href="{{route('categories.index')}}" class="btn btn-light">
+                    <button type="submit" class="btn btn-info mr-2">Registrar</button>
+                    <a href="{{route('categories.index')}}" class="btn btn-danger">
                         Cancelar
                     </a>
                     {!! Form::close() !!}

@@ -28,54 +28,132 @@
     
 
     <div class="row">
+
         <div class="col-md-6 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-0">Compras</h4>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-inline-block pt-3">
-                            <div class="d-md-flex">
-                                <h2 class="mb-0">${{$total->totalcompra}}</h2>
-                                <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
-                                    <i class="far fa-clock text-muted"></i>
-                                    <small class=" ml-1 mb-0">Mes actual</small>
-                                </div>
-                            </div>
-                            <small class="text-gray">Compras del sistema POS.</small>
-                        </div>
-                        <div class="d-inline-block">
-                            <i class="fas fa-chart-pie text-info icon-lg"></i>                                    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 grid-margin">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title mb-0">Vetas</h4>
+                    <h4 class="card-title mb-0">Ventas del mes en curso</h4>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="d-inline-block pt-3">
                             <div class="d-md-flex">
                                 <h2 class="mb-0">${{$total->totalventa}}</h2>
                                 <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
-                                    <i class="far fa-clock text-muted"></i>
-                                    <small class="ml-1 mb-0">Mes actual</small>
+                                    <!-- <i class="far fa-clock text-muted"></i> -->
+                                    <!-- <small class="ml-1 mb-0">Mes actual</small> -->
                                 </div>
                             </div>
-                            <small class="text-gray">Ventas del sistema POS.</small>
+                            <!-- <small class="text-gray">Ventas del sistema POS.</small> -->
                         </div>
                         <div class="d-inline-block">
-                            <i class="fas fa-shopping-cart text-danger icon-lg"></i>                                    
+                            <i class="fas fa-coins fa-fw text-danger icon-lg"></i>                                    
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="col-md-6 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-0">Compras del mes en curso</h4>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-inline-block pt-3">
+                            <div class="d-md-flex">
+                                <h2 class="mb-0">${{$total->totalcompra}}</h2>
+                                <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
+                                    <!-- <i class="far fa-clock text-muted"></i> -->
+                                    <!-- <small class=" ml-1 mb-0">Mes actual</small> -->
+                                </div>
+                            </div>
+                            <!-- <small class="text-gray">Compras del sistema POS.</small> -->
+                        </div>
+                        <div class="d-inline-block">
+                            <i class="fas fa-file-invoice-dollar fa-fw text-info icon-lg"></i>                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <div class="row">
+
+      <div class="col-md-4 grid-margin">
+          <div class="card">
+              <div class="card-body">
+                  <h4 class="card-title mb-0">Proveedores registrados</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-inline-block pt-3">
+                          <div class="d-md-flex">
+                              <h2 class="mb-0">{{$providers}}</h2>
+                              <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
+                                  <!-- <i class="far fa-clock text-muted"></i> -->
+                                  <!-- <small class="ml-1 mb-0">Mes actual</small> -->
+                              </div>
+                          </div>
+                          <!-- <small class="text-gray">Ventas del sistema POS.</small> -->
+                      </div>
+                      <div class="d-inline-block">
+                          <i class="fas fa-shipping-fast fa-fw text-success icon-lg"></i>                                    
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-4 grid-margin">
+          <div class="card">
+              <div class="card-body">
+                  <h4 class="card-title mb-0">Usuarios registrados</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-inline-block pt-3">
+                          <div class="d-md-flex">
+                              <h2 class="mb-0">{{$users}}</h2>
+                              <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
+                                  <!-- <i class="far fa-clock text-muted"></i> -->
+                                  <!-- <small class=" ml-1 mb-0">Mes actual</small> -->
+                              </div>
+                          </div>
+                          <!-- <small class="text-gray">Compras del sistema POS.</small> -->
+                      </div>
+                      <div class="d-inline-block">
+                          <i class="fas fa-user-tie fa-fw text-ligth icon-lg"></i>                                    
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-4 grid-margin">
+          <div class="card">
+              <div class="card-body">
+                  <h4 class="card-title mb-0">Productos registrados</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-inline-block pt-3">
+                          <div class="d-md-flex">
+                              <h2 class="mb-0">{{$products}}</h2>
+                              <div class="d-flex align-items-center ml-md-2 mt-2 mt-md-0">
+                                  <!-- <i class="far fa-clock text-muted"></i> -->
+                                  <!-- <small class=" ml-1 mb-0">Mes actual</small> -->
+                              </div>
+                          </div>
+                          <!-- <small class="text-gray">Compras del sistema POS.</small> -->
+                      </div>
+                      <div class="d-inline-block">
+                          <i class="fas fa-boxes fa-fw text-primary icon-lg"></i>                                    
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
     </div>
     @endforeach
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-4 grid-margin stretch-card">
           <div class="card">
             <div class="card-body d-flex flex-column">
@@ -246,7 +324,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     
 </div>

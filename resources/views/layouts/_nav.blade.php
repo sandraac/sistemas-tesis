@@ -48,6 +48,39 @@
             </div>
         </li>
         {{--  @endcan  --}} -->
+        @can('categories.index')
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('categories.index')}}">
+                <i class="fas fa-tags menu-icon"></i>
+                <span class="menu-title">Categorias</span>
+            </a>
+        </li>
+        @endcan
+        @can('products.index')
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('products.index')}}">
+                <i class="fas fa-boxes fa-fw menu-icon"></i>
+
+                <span class="menu-title">Productos</span>
+            </a>
+        </li>
+        @endcan
+        @can('providers.index')
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('providers.index')}}">
+                <i class="fas fa-shipping-fast menu-icon"></i>
+                <span class="menu-title">Proveedores</span>
+            </a>
+        </li>  
+        @endcan
+        @can('clients.index')
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('clients.index')}}">
+                <i class="fas fa-users menu-icon"></i>
+                <span class="menu-title">Clientes</span>
+            </a>
+        </li>
+        @endcan
         @can('purchases.index')
         <li class="nav-item">
             <a class="nav-link" href="{{route('purchases.index')}}">
@@ -73,7 +106,7 @@
             </a>
         </li>
         @endcan
-
+        
         {{--  @can('products.index' ||
             'categories.index' ||
             'tags.index' ||
@@ -88,16 +121,16 @@
             </a>
             <div class="collapse" id="inventario">
                 <ul class="nav flex-column sub-menu">
-                    @can('products.index')
+                    <!-- @can('products.index')
                     <li class="nav-item d-none d-lg-block">
                         <a class="nav-link" href="{{route('products.index')}}">Productos</a>
                     </li>
-                    @endcan
-                    @can('categories.index')
+                    @endcan -->
+                    <!-- @can('categories.index')
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('categories.index')}}">Categorías</a>
                     </li>
-                    @endcan
+                    @endcan -->
                     @can('tags.index')
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('tags.index')}}">Etiquetas</a>
@@ -173,23 +206,23 @@
                 </div>
             </li>
         {{--  @endcan  --}}
-        @can('clients.index')
+        <!-- @can('clients.index')
         <li class="nav-item">
             <a class="nav-link" href="{{route('clients.index')}}">
                 <i class="fas fa-users menu-icon"></i>
                 <span class="menu-title">Clientes</span>
             </a>
         </li>
-        @endcan
+        @endcan -->
        
-        @can('providers.index')
+        <!-- @can('providers.index')
         <li class="nav-item">
             <a class="nav-link" href="{{route('providers.index')}}">
                 <i class="fas fa-shipping-fast menu-icon"></i>
                 <span class="menu-title">Proveedores</span>
             </a>
         </li>  
-        @endcan
+        @endcan -->
         <!-- @can('users.index')
         <li class="nav-item">
             <a class="nav-link" href="{{route('users.index')}}">

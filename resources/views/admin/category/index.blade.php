@@ -11,15 +11,13 @@
 <div class="content-wrapper">
     <div class="page-header">
         <h3 class="page-title">
+            <i class="fas fa-tags fa-fw"></i>
             Categorías
         </h3>
-        <!-- <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Categorías</li>
-            </ol>
-        </nav> -->
     </div>
+    <p class="text-justify">
+        En el módulo CATEGORÍA usted podrá registrar las categorías que servirán para agregar productos y también podrá ver los productos que pertenecen a una categoría determinada. Además de lo antes mencionado, puede actualizar los datos de las categorías, realizar búsquedas de categorías o eliminarlas si así lo desea.
+    </p>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
@@ -28,7 +26,7 @@
                         <h4 class="card-title"></h4>
                         <div class="btn-group">
                             <a href="{{route('categories.create')}}" type="button" class="btn btn-info ">
-                                <i class="fas fa-plus"></i> Nuevo
+                                <i class="fas fa-plus"></i> Nueva Categoría
                             </a>
                         </div>
                     </div>
@@ -37,8 +35,7 @@
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
-                                    <th>Modulo</th>
-                                    <th>Cantidad</th>
+                                    
                                     <th>Descripción</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -49,22 +46,6 @@
                                     'item' => $category,
                                     'form_number' => '0'
                                 ])
-                                @if ($category->has_subcategory())
-                                    @foreach ($category->subcategories as $subcategory_1)
-                                    @include('admin.category._category_list', [
-                                        'item' => $subcategory_1,
-                                        'form_number' => '1'
-                                    ])
-                                    @if ($subcategory_1->has_subcategory())
-                                        @foreach ($subcategory_1->subcategories as $subcategory_2)
-                                        @include('admin.category._category_list', [
-                                            'item' => $subcategory_2,
-                                            'form_number' => '2'
-                                        ])
-                                        @endforeach
-                                    @endif
-                                    @endforeach
-                                @endif
                                 @endforeach
                             </tbody>
                         </table>

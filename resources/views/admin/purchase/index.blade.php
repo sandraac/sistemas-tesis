@@ -71,7 +71,7 @@
                                             <i class="far fa-edit"></i>
                                         </a>
                                         <button class="btn btn-outline-danger delete-confirm"
-                                        type="button" onclick="" title="Eliminar">
+                                        type="button" onclick="confirmDelete('delete-item_{{$purchase->id}}')" title="Eliminar">
                                             <i class="far fa-trash-alt"></i>
                                         </button>
                                         <a class="jsgrid-button btn btn-success" href="{{route('change.status.purchases', $purchase)}}" title="Cancelado">

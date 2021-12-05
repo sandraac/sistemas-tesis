@@ -18,17 +18,13 @@
         <!-- featured category start -->
         <div class="latest-product-active slick-padding slick-arrow-style">
             
-            <!-- @foreach ($new_products as $new_product)
+            @foreach ($new_products as $new_product)
                 @include('web.products.product_item_fix', [
                     'mb'=> '',
                     'product'=> $new_product
                 ])
-            @endforeach -->
-            @foreach ($most_viewed_products as $most_viewed_product)
-                @include('web.products._category_item', [
-                    'product' => $most_viewed_product
-                ])
-             @endforeach
+            @endforeach 
+            
         </div>
         <!-- featured category end -->
     </div>
@@ -48,17 +44,12 @@
         </div> <!-- section title end -->
         <!-- featured category start -->
         <div class="latest-product-active slick-padding slick-arrow-style">
-            <!-- @foreach ($featured_products->take(10) as $featured_product)
+            @foreach ($featured_products->take(10) as $featured_product)
                 @include('web.products.product_item_fix', [
                     'mb' => '',
                     'product' => $featured_product
                 ])
-            @endforeach -->
-            @foreach ($most_viewed_products as $most_viewed_product)
-                @include('web.products._category_item', [
-                    'product' => $most_viewed_product
-                ])
-             @endforeach
+            @endforeach 
         </div>
         <!-- featured category end -->
     </div>

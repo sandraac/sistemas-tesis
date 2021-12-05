@@ -74,9 +74,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('sales', SaleController::class)->names('sales')->except([
         'edit', 'update', 'destroy'
     ]);
-    Route::resource('purchases', PurchaseController::class)->names('purchases')->except([
-        'edit', 'update', 'destroy'
-    ]);
+    Route::resource('purchases', PurchaseController::class)->names('purchases');
     Route::resource('business', BusinessController::class)->names('business')->only([
         'index', 'update'
     ]);

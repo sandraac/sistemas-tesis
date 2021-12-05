@@ -46,28 +46,22 @@
 
                                     @if ($purchase->status == 'VALID')
                                     <td>
-                                        <!-- <a class="jsgrid-button btn btn-success" href="{{route('change.status.purchases', $purchase)}}" title="Editar">
-                                            Registrado <i class="fas fa-check"></i>
-                                        </a> -->
                                         <small class="p-1 bg-warning text-white rounded">Registrado</small>
                                     </td>
                                     @else
                                     <td>
-                                        <!-- <a class="jsgrid-button btn btn-danger" href="{{route('change.status.purchases', $purchase)}}" title="Cancelado">
-                                            Aprobar <i class="fas fa-times"></i>
-                                        </a> -->
                                         <small class="p-1 bg-success text-white rounded">Aprobado</small>
                                     </td>
                                     @endif
 
                                     @if ($purchase->status == 'VALID')
                                     <td>
-                                        <form method="POST" action="" id="">
+                                        <form method="POST" action="{{route('purchases.destroy',$purchase)}}" id="delete-item_{{$purchase->id}}">
 
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
-                                        <a class="btn btn-outline-info" href="" title="Editar">
+                                        <a class="btn btn-outline-info" href="{{route('purchases.edit', $purchase)}}" title="Editar">
                                             <i class="far fa-edit"></i>
                                         </a>
                                         <button class="btn btn-outline-danger delete-confirm"
@@ -103,6 +97,7 @@
 @section('scripts')
 <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.bootstrap4.min.js"></script>
+{!! Html::script('js/my_functions.js') !!}
 <script>
     $(document).ready(function() {
         var table = $('#purchases_listing').DataTable({

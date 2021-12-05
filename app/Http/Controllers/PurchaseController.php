@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Purchase;
 use App\Models\Provider;
 use App\Models\Product;
+use App\Models\PurchaseDetails;
 use Illuminate\Http\Request;
 use App\Http\Requests\Purchase\StoreRequest;
 use App\Http\Requests\Purchase\UpdateRequest;
-use App\PurchaseDetails;
+
 
 
 use Barryvdh\DomPDF\Facade as PDF;
@@ -24,6 +25,9 @@ class PurchaseController extends Controller
             'permission:purchases.create',
             'permission:purchases.store',
             'permission:purchases.show',
+            'permission:purchases.edit',
+            'permission:purchases.update',
+            'permission:purchases.destroy',
             'permission:purchases.pdf',
             'permission:upload.purchases',
             'permission:change.status.purchases',
@@ -55,10 +59,27 @@ class PurchaseController extends Controller
         foreach ($purchaseDetails as $purchaseDetail) {
             $subtotal += $purchaseDetail->quantity * $purchaseDetail->price;
         }
+
+        dd($purchaseDetails);
         return view('admin.purchase.show', compact('purchase', 'purchaseDetails', 'subtotal'));
     }
     public function edit(Purchase $purchase)
     {
+        // $providers = Provider::get();
+
+        $providers = Provider::get();
+
+        $products = Product::pos_products()->get();
+
+        $subtotal = 0 ;
+        $purchaseDetails = $purchase->purchaseDetails;
+        //dd($purchaseDetails);
+        foreach ($purchaseDetails as $purchaseDetail) {
+            $subtotal += $purchaseDetail->quantity * $purchaseDetail->price;
+        }
+        return view('admin.purchase.edit', compact('purchase', 'purchaseDetails', 'subtotal', 'products', 'providers'));
+
+        // return view('admin.purchase.edit', compact('purchase', 'products', 'providers', ''));
         // $providers = Provider::get();
         // return view('admin.purchase.edit', compact('purchase'));
     }
@@ -69,8 +90,12 @@ class PurchaseController extends Controller
     }
     public function destroy(Purchase $purchase)
     {
+        // $purchaseDetail = PurchaseDetails::findOrFail($purchase->id);
+        // $purchaseDetail->delete();
         // $purchase->delete();
-        // return redirect()->route('purchases.index');
+       // dd($purchaseDetail[0]);
+        //$purchase->delete();
+        //return redirect()->route('purchases.index')->with('toast_success', '¡Producto eliminado con éxito!');
     }
 
     public function pdf(Purchase $purchase)

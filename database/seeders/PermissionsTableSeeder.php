@@ -105,6 +105,9 @@ class PermissionsTableSeeder extends Seeder
         Permission::create(['name'=>'purchases.create']);
         Permission::create(['name'=>'purchases.store']);
         Permission::create(['name'=>'purchases.show']);
+        Permission::create(['name'=>'purchases.edit']);
+        Permission::create(['name'=>'purchases.update']);
+        Permission::create(['name'=>'purchases.destroy']);
         Permission::create(['name'=>'business.index']);
         Permission::create(['name'=>'business.update']);
         Permission::create(['name'=>'subscriptions.index']);
@@ -233,6 +236,9 @@ class PermissionsTableSeeder extends Seeder
             'purchases.create',
             'purchases.store',
             'purchases.show',
+            'purchases.edit',
+            'purchases.update',
+            'purchases.destroy',
             'business.index',
             'business.update',
             'subscriptions.index',

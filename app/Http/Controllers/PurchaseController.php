@@ -24,6 +24,8 @@ class PurchaseController extends Controller
             'permission:purchases.create',
             'permission:purchases.store',
             'permission:purchases.show',
+            'permission:purchases.destroy',
+            'permission:purchases.update',
             'permission:purchases.pdf',
             'permission:upload.purchases',
             'permission:change.status.purchases',

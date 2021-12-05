@@ -29,7 +29,7 @@
                                     <th>Id</th>
                                     <th>Fecha</th>
                                     <th>Total</th>
-                                    <!-- <th>Estado</th> -->
+                                    <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -44,19 +44,42 @@
                                     </td>
                                     <td>{{$purchase->total}}</td>
 
-                                    <!-- @if ($purchase->status == 'VALID')
+                                    @if ($purchase->status == 'VALID')
                                     <td>
-                                        <a class="jsgrid-button btn btn-success" href="{{route('change.status.purchases', $purchase)}}" title="Editar">
-                                            Activo <i class="fas fa-check"></i>
-                                        </a>
+                                        <!-- <a class="jsgrid-button btn btn-success" href="{{route('change.status.purchases', $purchase)}}" title="Editar">
+                                            Registrado <i class="fas fa-check"></i>
+                                        </a> -->
+                                        <small class="p-1 bg-warning text-white rounded">Registrado</small>
                                     </td>
                                     @else
                                     <td>
-                                        <a class="jsgrid-button btn btn-danger" href="{{route('change.status.purchases', $purchase)}}" title="Editar">
-                                            Cancelado <i class="fas fa-times"></i>
-                                        </a>
+                                        <!-- <a class="jsgrid-button btn btn-danger" href="{{route('change.status.purchases', $purchase)}}" title="Cancelado">
+                                            Aprobar <i class="fas fa-times"></i>
+                                        </a> -->
+                                        <small class="p-1 bg-success text-white rounded">Aprobado</small>
                                     </td>
-                                    @endif -->
+                                    @endif
+
+                                    @if ($purchase->status == 'VALID')
+                                    <td>
+                                        <form method="POST" action="" id="">
+
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+
+                                        <a class="btn btn-outline-info" href="" title="Editar">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                        <button class="btn btn-outline-danger delete-confirm"
+                                        type="button" onclick="confirmDelete('delete-item_{{$purchase->id}}')" title="Eliminar">
+                                            <i class="far fa-trash-alt"></i>
+                                        </button>
+                                        <a class="jsgrid-button btn btn-success" href="{{route('change.status.purchases', $purchase)}}" title="Cancelado">
+                                            Aprobar <i class="fas fa-check"></i>
+                                        </a> 
+                                        </form>
+                                    </td>
+                                    @else
                                     <td style="width: 20%;">
                                         <a href="{{route('purchases.pdf', $purchase)}}" class="btn btn-outline-danger"
                                         title="Generar PDF"
@@ -65,6 +88,7 @@
                                         title="Ver detalles"
                                         ><i class="far fa-eye"></i></a>
                                     </td>
+                                    @endif
                                 </tr>
                                 @endforeach
                             </tbody>

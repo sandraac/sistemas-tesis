@@ -1,12 +1,4 @@
-<?php
-  $exibirModal = false;
-  if(!isset($_COOKIE["mostrarModal"]))
-  {
-    $expirar = 3600;
-    setcookie('mostrarModal', 'SI', (time() + $expirar));
-    $exibirModal = true;
-  }
-?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -356,14 +348,6 @@
     {{--  {!! Html::script('melody/js/dashboard.js') !!}  --}}
     <!-- End custom js for this page-->
     @yield('scripts')
-    @if ($exibirModal === true)
-    <script>
-        $(document).ready(function()
-        {
-          $("#modalInicio").modal("show");
-        });
-    </script>
-    @endif
 </body>
 
 

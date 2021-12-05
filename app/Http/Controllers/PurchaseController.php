@@ -59,8 +59,6 @@ class PurchaseController extends Controller
         foreach ($purchaseDetails as $purchaseDetail) {
             $subtotal += $purchaseDetail->quantity * $purchaseDetail->price;
         }
-
-        dd($purchaseDetails);
         return view('admin.purchase.show', compact('purchase', 'purchaseDetails', 'subtotal'));
     }
     public function edit(Purchase $purchase)

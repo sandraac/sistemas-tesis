@@ -78,7 +78,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                        @foreach($purchaseDetails as $purchaseDetail)
+                       @if(isset($purchaseDetails)) 
+                       @foreach($purchaseDetails as $purchaseDetail)
                                     <tr>
                                         <td><button type="button" class="btn btn-danger btn-sm" onclick="eliminar('+cont+');"><i class="fa fa-times"></i></button></td>
                                         <td>{{$purchaseDetail->product->name }}</td>
@@ -87,6 +88,7 @@
                                         <td>s/{{number_format($purchaseDetail->quantity*$purchaseDetail->price,2)}}</td>
                                     </tr>
                         @endforeach
+                       @endif
                         </tbody>
                     </table>
                 </div>

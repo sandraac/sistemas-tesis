@@ -18,13 +18,13 @@
         <h3 class="page-title">
             Detalles de venta
         </h3>
-        <nav aria-label="breadcrumb">
+        <!-- <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-custom">
                 <li class="breadcrumb-item"><a href="{{route('home')}}">Panel administrador</a></li>
                 <li class="breadcrumb-item"><a href="{{route('sales.index')}}">Ventas</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Detalles de venta</li>
             </ol>
-        </nav>
+        </nav> -->
     </div>
     <div class="row">
         <div class="col-12">

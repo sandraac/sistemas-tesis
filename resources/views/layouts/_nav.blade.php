@@ -167,7 +167,7 @@
         </li> 
         @endcan
         -->
-        {{--  @can(
+        <!-- {{--  @can(
             'social_medias.index' ||
             'sliders.index' ||
             'subscriptions.index' ||
@@ -204,7 +204,7 @@
                         @endcan
                     </ul>
                 </div>
-            </li>
+            </li> -->
         {{--  @endcan  --}}
         <!-- @can('clients.index')
         <li class="nav-item">

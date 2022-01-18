@@ -6,7 +6,7 @@
     <div class="action_link">
         <button class="buy-btn" type="submit" style=" border: none;
         padding: 0;
-        ">add to cart<i class="fa fa-shopping-cart"></i> </button>
+        ">Añadir al carrito<i class="fa fa-shopping-cart"></i> </button>
     </div>
 </div>
 {!! Form::close() !!}

@@ -21,7 +21,7 @@
                     class="fa fa-heart-o"></i></a>
             <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i
                     class="fa fa-refresh"></i></a>
-            <a href="{{route('store_a_product',$product)}}" data-toggle="tooltip" data-placement="left" title="Add to cart"><i
+            <a href="{{route('store_a_product',$product)}}" data-toggle="tooltip" data-placement="left" title="Añadir al carrito"><i
                     class="fa fa-shopping-cart"></i></a>
         </div>
     </div>

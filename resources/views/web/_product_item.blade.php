@@ -39,7 +39,7 @@
                 consequat nisi ut mauris efficitur lacinia.</p>  --}}
             <div class="product-list-action-link">
                 <a class="buy-btn" href="{{route('store_a_product',$product)}}" data-toggle="tooltip" data-placement="top"
-                    title="Add to cart">go to buy <i class="fa fa-shopping-cart"></i> </a>
+                    title="Añadir al carrito">go to buy <i class="fa fa-shopping-cart"></i> </a>
                 <a href="#" data-toggle="modal" data-target="#quick_view{{$product->id}}"> <span
                         data-toggle="tooltip" data-placement="top" title="Quick view"><i
                             class="fa fa-search"></i></span> </a>

@@ -31,10 +31,11 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebBlogController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\WebShopController;
+use App\Http\Controllers\FacturationController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
-
+    Route::resource('facturations', FacturationController::class)->names('facturations');
     Route::resource('users', UserController::class)->names('users');
     Route::get('dashboard', [HomeController::class, 'index'])->name('home');
     Route::resource('brands', BrandController::class)->except([

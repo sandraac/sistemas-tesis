@@ -107,6 +107,16 @@
         </li>
         @endcan
         
+
+        
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('facturations.index')}}">
+                <i class="fas fa-shipping-fast menu-icon"></i>
+                <span class="menu-title">Facturación</span>
+            </a>
+        </li>
+       
+
         {{--  @can('products.index' ||
             'categories.index' ||
             'tags.index' ||

@@ -36,6 +36,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
     Route::resource('facturations', FacturationController::class)->names('facturations');
+    
+    // Route::get('facturacion/{id}/enviar', 'FacturacionController@enviar')->name('facturacion.enviar');
+    Route::get('facturations/{id}/enviar', [FacturationController::class, 'enviar'])->name('facturacion.enviar');
+   
+
     Route::resource('users', UserController::class)->names('users');
     Route::get('dashboard', [HomeController::class, 'index'])->name('home');
     Route::resource('brands', BrandController::class)->except([

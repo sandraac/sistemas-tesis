@@ -9,9 +9,7 @@ use App\Models\PurchaseDetails;
 use Illuminate\Http\Request;
 use App\Http\Requests\Purchase\StoreRequest;
 use App\Http\Requests\Purchase\UpdateRequest;
-
-
-
+use App\Models\Kardex;
 use Barryvdh\DomPDF\Facade as PDF;
 
 
@@ -115,8 +113,21 @@ class PurchaseController extends Controller
 
     public function change_status(Purchase $purchase)
     {
+        
         if ($purchase->status == 'VALID') {
             $purchase->update(['status'=>'CANCELED']);
+            $products=PurchaseDetails::Where('purchase_id','=',$purchase['id'])->get()->toArray();
+            foreach($products as $product){
+                //dd($product);
+                $kardex=new Kardex();
+                $kardex->producto_id=$product['product_id'];
+                $kardex->input_units=$product['quantity'];
+                $kardex->input_cost=$product['quantity']*$product['price'];
+                $kardex->kardex_date=date("Y-m-d H:i:s");
+                //dd($kardex);
+                
+                $kardex->save();
+            }
             return redirect()->back()->with('toast_success', '¡Estado cambiado con éxito!');
         } else {
             $purchase->update(['status'=>'VALID']);

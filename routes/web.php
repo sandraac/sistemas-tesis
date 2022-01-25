@@ -32,10 +32,14 @@ use App\Http\Controllers\WebBlogController;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\WebShopController;
 use App\Http\Controllers\FacturationController;
+use App\Http\Controllers\KardexController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
     Route::resource('facturations', FacturationController::class)->names('facturations');
+    Route::resource('kardex', KardexController::class)->names('kardex');
+    Route::post('kardex_results', [KardexController::class, 'results'])->name('kardex.results');
+    Route::get('kardex/pdf/{kardex}', [KardexController::class, 'pdf'])->name('kardex.pdf');
     
     // Route::get('facturacion/{id}/enviar', 'FacturacionController@enviar')->name('facturacion.enviar');
     Route::get('facturations/{id}/enviar', [FacturationController::class, 'enviar'])->name('facturacion.enviar');

@@ -32,6 +32,17 @@ class Sale extends Model
         $product->subtract_stock($quantity);
     }
     public function my_store($request){
+        
+        $products=$request->ToArray();
+        //dd($products);
+        for($i=0;$i<count($products['product_id']);$i++){
+            $kardex=new Kardex();
+            $kardex->producto_id=$products['product_id'][$i];
+            $kardex->output_units=$products['quantity'][$i];
+            $kardex->output_cost=$products['quantity'][$i]*$products['price'][$i];
+            $kardex->kardex_date=date("Y-m-d H:i:s");
+            $kardex->save();
+        }
         $sale = self::create($request->all()+[
             'user_id'=>Auth::user()->id,
             'sale_date'=>Carbon::now('America/Lima'),

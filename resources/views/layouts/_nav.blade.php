@@ -117,6 +117,14 @@
         </li>
        
 
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('kardex.index')}}">
+                <i class="fas fa-shipping-fast menu-icon"></i>
+                <span class="menu-title">Kardex</span>
+            </a>
+        </li>
+
+
         {{--  @can('products.index' ||
             'categories.index' ||
             'tags.index' ||

@@ -94,7 +94,7 @@ class FacturationController extends Controller
 
         $facturacionSuccess = $facturacion['sunatResponse']['success'] == true ? $facturacion['sunatResponse']['cdrResponse']['description'] : '';
 
-
+        dd($facturacionSuccess);
         // $mensaje = $facturacionSuccess == true ?  $facturacion['sunatResponse']['cdrResponse']['description'] : "La boleta no ha sido aceptada"; 
 
         return view('admin.facturation.index', compact('facturacionSuccess'));

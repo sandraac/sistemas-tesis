@@ -275,9 +275,14 @@
                     @endcan
                     @can('reports.date')
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('reports.date')}}">Reportes por fecha</a>
+                        <a class="nav-link" href="{{route('reports.date')}}">Ventas por fecha</a>
                     </li>
                     @endcan
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('reports.purchase')}}">Compras por fecha</a>
+                    </li>
+
                 </ul>
             </div>
         </li>

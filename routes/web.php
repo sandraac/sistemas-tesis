@@ -100,7 +100,9 @@ Route::prefix('admin')->group(function () {
     Route::put('orders_update/{id}', [OrderController::class, 'orders_update'])->name('orders_update');
     Route::get('reports_day', [ReportController::class, 'reports_day'])->name('reports.day');
     Route::get('reports_date', [ReportController::class , 'reports_date'])->name('reports.date');
+    Route::get('reports_purchase', [ReportController::class , 'reports_purchase'])->name('reports.purchase');
     Route::post('sales/report_results', [ReportController::class, 'report_results'])->name('report.results');
+    Route::post('sales/report_resultsPurchases', [ReportController::class, 'report_resultsPurchase'])->name('report.resultsPurchase');
     Route::post('upload_image/{id}', [AjaxController::class, 'upload_image'])->name('upload.image');
     Route::post('upload_images_product/{id}', [AjaxController::class, 'upload_images_product'])->name('upload_images_product');
     Route::get('get_images/{id}', [AjaxController::class, 'get_images'])->name('get.images');

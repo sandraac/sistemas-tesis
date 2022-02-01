@@ -98,13 +98,13 @@
         </li>
         @endcan
         @can('orders.index')
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="{{route('orders.index')}}">
                 <i class="fas fa-shipping-fast menu-icon"></i>
 
                 <span class="menu-title">Pedidos</span>
             </a>
-        </li>
+        </li> -->
         @endcan
         
 
@@ -130,7 +130,7 @@
             'tags.index' ||
             'brands.index'
             )  --}}
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#inventario" aria-expanded="false"
                 aria-controls="inventario">
                 <i class="fas fa-boxes menu-icon menu-icon"></i>
@@ -138,7 +138,7 @@
                 <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="inventario">
-                <ul class="nav flex-column sub-menu">
+                <ul class="nav flex-column sub-menu"> -->
                     <!-- @can('products.index')
                     <li class="nav-item d-none d-lg-block">
                         <a class="nav-link" href="{{route('products.index')}}">Productos</a>
@@ -150,18 +150,18 @@
                     </li>
                     @endcan -->
                     @can('tags.index')
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{route('tags.index')}}">Etiquetas</a>
-                    </li>
+                    </li> -->
                     @endcan
                     @can('brands.index')
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{route('brands.index')}}">Marcas</a>
-                    </li>
+                    </li> -->
                     @endcan
-                </ul>
+                <!-- </ul>
             </div>
-        </li>
+        </li> -->
         {{--  @endcan  --}}
        
         <!-- @can('posts.index')

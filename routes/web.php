@@ -158,7 +158,9 @@ Route::prefix('client')->middleware(['verified'])->group(function () {
     Route::get('productos/etiqueta/{tag}', [WebShopController::class, 'get_products_tag'])->name('web.get_products_tag');
     Route::get('productos', [WebShopController::class, 'shop_grid'])->name('web.shop_grid');
     Route::get('producto/{product}', [WebShopController::class, 'product_details'])->name('web.product_details');
-    Route::get('/', [WebShopController::class, 'welcome'])->name('web.welcome');
+    //INICIO
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    //---------------------
     route::get('productos/marcas/{brand}', [WebShopController::class, 'get_products_brand'])->name('web.get_products_brand');
     Route::post('subscription_email', [WebController::class, 'subscription_email'])->name('web.subscription_email');
     Route::get('nosotros', [WebController::class, 'about_us'])->name('web.about_us');

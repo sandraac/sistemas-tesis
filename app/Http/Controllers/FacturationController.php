@@ -164,11 +164,11 @@ class FacturationController extends Controller
              
         ]);
 
-        var_dump($respuestaPdf);
+        // var_dump($respuestaPdf);
         // $mensaje = $facturacionSuccess == true ?  $facturacion['sunatResponse']['cdrResponse']['description'] : "La boleta no ha sido aceptada"; 
 
-        $facturacionPdf = $respuestaPdf->json();
-        var_dump($facturacionPdf);
+        // $facturacionPdf = $respuestaPdf->json();
+        // var_dump($facturacionPdf);
 
         return view('admin.facturation.index', compact('facturacionSuccess'));
     }

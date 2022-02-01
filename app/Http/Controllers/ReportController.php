@@ -6,6 +6,7 @@ use App\Models\Purchase;
 use Illuminate\Http\Request;
 use App\Models\Sale;
 use Carbon\Carbon;
+// use Illuminate\Support\Facades\DB;
 
 class ReportController extends Controller
 {
@@ -26,6 +27,13 @@ class ReportController extends Controller
     public function reports_date(){
         $sales = Sale::whereDate('sale_date', Carbon::today('America/Lima'))->get();
         $total = $sales->sum('total');
+
+        // $ventasdia = Sale::where('status', 'VALID')->select(
+        //     DB::raw("count(*) as count"),
+        //     DB::raw("SUM(total) as total"),
+        //     DB::raw("DATE_FORMAT(sale_date,'%D %M %Y') as date")
+        // )->groupBy('date')->take(30)->get();
+
         return view('admin.report.reports_date', compact('sales', 'total'));
     }
     public function report_results(Request $request){

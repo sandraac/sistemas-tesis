@@ -76,6 +76,22 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <i class="fas fa-chart-line"></i>
+                        Ventas diarias
+                    </h4>
+                    <canvas id="ventas_diarias" height="100"></canvas>
+                    <div id="orders-chart-legend" class="orders-chart-legend"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 @endsection
 @section('scripts')
@@ -92,6 +108,46 @@
           mes='0'+mes //agrega cero si el menor de 10
         document.getElementById('fecha_fin').value=ano+"-"+mes+"-"+dia;
       }
+
+      var varVenta=document.getElementById('ventas_diarias').getContext('2d');
+            var charVenta = new Chart(varVenta, {
+                type: 'line',
+                data: {
+                    labels: [<?php foreach ($sales as $sale)
+                {
+                    $dia = $sale->sale_date;
+
+
+                    echo '"'. $dia.'",';} ?>],
+                    datasets: [{
+                        label: 'Ventas',
+                        data: [<?php foreach ($sales as $reg)
+                        {echo ''. $reg->total.',';} ?>],
+                        backgroundColor: '#5E50F9',
+                        borderColor: '#3a3f51',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                      yAxes: [{
+                        ticks: {
+                            stepSize: 1,
+                            beginAtZero:true
+                        }
+                      }]
+                    },
+                    legend: {
+                      display: false
+                    },
+                    elements: {
+                      point: {
+                        radius: 5
+                      }
+                    }
+                }
+            });
+    
 </script>
 
 @endsection

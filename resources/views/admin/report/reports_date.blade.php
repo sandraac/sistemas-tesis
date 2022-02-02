@@ -41,6 +41,16 @@
                                 name="fecha_fin" id="fecha_fin">
                             </div>
                         </div>
+                        <div class="col-12 col-md-3">
+                            <div class="form-group">
+
+                            @if(isset($fecha1)) 
+                            <input class="form-control" type="hidden" 
+                                value="{{$fecha1}}" 
+                                name="fechainicio" id="fechainicio">
+                            @endif
+                            </div>
+                        </div>
                         <div class="col-12 col-md-3 text-center mt-4">
                             <div class="form-group">
                                <button type="submit" class="btn btn-primary btn-sm">Consultar</button>

@@ -26,8 +26,8 @@
     <div class="container-fluid page-body-wrapper full-page-wrapper">
       <div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
         <div class="row flex-grow">
-          <div class="col-lg-6  d-flex ">
-              <img src="{!!asset('galio/assets/img/logo/LogoRemitec.png')!!}" alt="logo">
+          <div class="col-lg-6">
+              <img class="mt-5" src="{!!asset('galio/assets/img/logo/LogoRemitec.png')!!}" alt="logo">
           </div>
           <div class="col-lg-6 d-flex align-items-center justify-content-center">
             <div class="auth-form-transparent text-left p-3">

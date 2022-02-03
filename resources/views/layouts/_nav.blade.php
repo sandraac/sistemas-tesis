@@ -289,6 +289,29 @@
         {{--  @endcan  --}}
 
 
+        
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#page-layouts2" aria-expanded="false"
+                aria-controls="page-layouts">
+                <i class="far fa-file-pdf menu-icon"></i>
+                <span class="menu-title">Información</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="page-layouts2">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('informations.index')}}">Manual de usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://drive.google.com/file/d/1X7MIU2xhZNg8PzrEgQIMHiTd66StZeGU/view?usp=sharing" target="_blank">Manual de instalación</a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+        
+
+
         {{--  @can(
             'business.index' ||
             'printers.index'

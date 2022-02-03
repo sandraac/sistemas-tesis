@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Sale;
 use Http;
 
 class FacturationController extends Controller
@@ -14,7 +15,8 @@ class FacturationController extends Controller
      */
     public function index()
     {
-        return view('admin.facturation.index');
+        $sales = Sale::get();
+        return view('admin.facturation.index',compact('sales'));
     }
 
     public function enviar($id) 

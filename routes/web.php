@@ -33,6 +33,7 @@ use App\Http\Controllers\WebController;
 use App\Http\Controllers\WebShopController;
 use App\Http\Controllers\FacturationController;
 use App\Http\Controllers\KardexController;
+use App\Http\Controllers\InformationController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('admin')->group(function () {
@@ -44,6 +45,11 @@ Route::prefix('admin')->group(function () {
     // Route::get('facturacion/{id}/enviar', 'FacturacionController@enviar')->name('facturacion.enviar');
     Route::get('facturations/{id}/enviar', [FacturationController::class, 'enviar'])->name('facturacion.enviar');
    
+
+    Route::get('informations', [InformationController::class, 'index'])->name('informations.index');
+    Route::get('informations/categories', [InformationController::class, 'categories'])->name('informations.categories');
+    Route::get('informations/sales', [InformationController::class, 'sales'])->name('informations.sales');
+
 
     Route::resource('users', UserController::class)->names('users');
     Route::get('dashboard', [HomeController::class, 'index'])->name('home');

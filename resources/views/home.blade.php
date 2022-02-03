@@ -226,66 +226,7 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-8 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">
-                <i class="fas fa-table"></i>
-                Pedidos del día
-              </h4>
-              <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Cliente</th>
-                      <th>Fecha</th>
-                      <th>Monto</th>
-                      <th>Estado</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                      @foreach ($orders_of_the_day as $order_of_the_day)
-                      <tr>
-                        <td class="font-weight-bold">
-                          {{$order_of_the_day->user->name}}
-                        </td>
-                        <td class="text-muted">
-                            {{$order_of_the_day->order_date->diffForHumans()}}
-                        </td>
-                        <td>
-                            {{$order_of_the_day->total()}}
-                        </td>
-                        <td>
-                          <label class="badge badge-{{$order_of_the_day->status()['color']}} badge-pill">{{$order_of_the_day->status()['text']}}</label>
-                        </td>
-                      </tr>
-                      @endforeach
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body d-flex flex-column">
-                <h4 class="card-title">
-                  <i class="fas fa-tachometer-alt"></i>
-                  Estado de pedios
-                </h4>
-                <p class="card-description">Estado de pedidos del día</p>
-                <div class="flex-grow-1 d-flex flex-column justify-content-between">
-                  <canvas id="daily-sales-chart" class="mt-3 mb-3 mb-md-0"></canvas>
-                  <div id="daily-sales-chart-legend" class="daily-sales-chart-legend pt-4 border-top"></div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-      </div>
-
+    
 
     <div class="row">
         <div class="col-12 grid-margin">
